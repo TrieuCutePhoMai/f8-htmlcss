@@ -1,0 +1,136 @@
+/* nền móng*/
+:root {
+    --white-color:#fff;
+    --black--color:#000;
+    --text-color:#333;
+    --primary--color:#fb5533;
+    --star--gold-color: #ffce3d;
+    --height-header: 120px;
+    --height-nav: 38.5px;
+    --height-endhead: calc(var(--height-header) - var(--height-nav));
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;/*tương đương 16px*/
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+/*grid > row> column*/
+.grid {
+    width: 1200px;
+    max-width: 100%;/* thiết bị lón hơn 1200px thì lấy 1200px còn nhỏ hơn thì nó sẽ lấy chiều dài đối đa của thiết bị đó*/
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 36px 0;
+}
+
+.grid__row-5 {
+    padding-top: 20px;
+}
+/*Test COLUMN*/
+
+.grid__column-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 16.66667%;
+}
+
+.grid__column-2-5 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 83.333334%;
+}
+
+/*BTN*/
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 107px;
+    height: 40px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    outline: none;
+    color: var(--text-color);
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.btn.btn--primary {
+    background-color: var(--primary--color);
+    color: var(--white-color);
+}
+/*select*/
+
+.home-select {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 238px;
+    height: 40px;
+    padding: 0 15px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+}
+
+
+/*Animation*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 
+
+@keyframes grouth {
+    from {
+       transform: scale(0.7);
+    }
+    to {
+        transform: calc(1);
+    }
+}
+
+@keyframes headerNotifyGrouth {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
